@@ -1,0 +1,46 @@
+.section {
+  margin-top: 1.15rem;
+  border-radius: 1.35rem;
+}
+
+.section-light {
+  padding: clamp(1.3rem, 2.5vw, 2.1rem);
+  border: 1px solid rgba(132, 166, 205, 0.3);
+  background:
+    linear-gradient(145deg, rgba(18, 44, 72, 0.78), rgba(14, 34, 57, 0.9));
+  box-shadow: 0 18px 36px rgba(4, 14, 35, 0.28);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.62rem 1.05rem;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent-gold), #ffcb66);
+  color: #2b2102;
+}
+
+.btn-ghost {
+  border-color: rgba(216, 232, 247, 0.56);
+  color: var(--text-main);
+  background: rgba(16, 41, 69, 0.36);
+}
+
+@media (max-width: 640px) {
+  .section {
+    margin-top: 0.85rem;
+  }
+}

@@ -1,0 +1,30 @@
+.stats {
+  padding: 0.5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.stat-card {
+  background: var(--surface-dark);
+  border-radius: 1rem;
+  border: 1px solid var(--surface-dark-border);
+  padding: 1rem;
+}
+
+.stat-card strong {
+  display: block;
+  font-family: var(--font-display);
+  color: #f4fbff;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 0.35rem;
+  color: #afc2d9;
+}

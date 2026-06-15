@@ -1,0 +1,92 @@
+.hero {
+  text-align: center;
+  padding: clamp(2.1rem, 7vw, 4rem) clamp(1.2rem, 5vw, 4rem);
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(109, 205, 224, 0.2), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(248, 190, 102, 0.16), transparent 38%),
+    linear-gradient(130deg, #0f1f41 12%, #15345b 56%, #1e385a 100%);
+  border: 1px solid rgba(128, 167, 212, 0.34);
+}
+
+.hero-eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(219, 236, 255, 0.8);
+}
+
+.hero h1 {
+  margin: 0.55rem auto 0;
+  max-width: 18ch;
+  font-size: clamp(2.05rem, 6vw, 3.75rem);
+  line-height: 1.2;
+  font-family: var(--font-display);
+}
+
+.hero-description {
+  margin: 0.95rem auto 0;
+  max-width: 62ch;
+  font-size: clamp(1.25rem, 4vw, 1.4rem);
+  color: rgba(227, 236, 248, 0.9);
+}
+
+.hero-actions {
+  margin-top: 1.45rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-scroll {
+  margin: 1.35rem auto 0;
+  width: fit-content;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: rgba(220, 236, 255, 0.9);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-scroll svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: hero-scroll-bounce 1.4s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-scroll {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,223 @@
+.projects {
+  padding: clamp(1.25rem, 2.4vw, 2rem);
+  border: 1px solid rgba(179, 152, 97, 0.25);
+  background: linear-gradient(160deg, #152745 10%, #0f2236 100%);
+}
+
+.filters {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.2rem 0;
+}
+
+.filters button {
+  border: 1px solid rgba(176, 196, 221, 0.4);
+  background: rgba(18, 35, 59, 0.66);
+  color: #c8d8ea;
+  border-radius: 999px;
+  padding: 0.44rem 0.88rem;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.filters button:hover,
+.filters button.is-active {
+  background: rgba(240, 194, 116, 0.22);
+  color: #fff2d6;
+  border-color: rgba(240, 194, 116, 0.52);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+
+.project-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border-radius: 0.45rem;
+  border: 1px solid rgba(167, 189, 218, 0.2);
+  background: #dde3ee;
+  min-height: 185px;
+}
+
+.project-card.featured {
+  grid-column: 1 / -1;
+}
+
+.project-card.compact {
+  grid-template-columns: 1fr;
+  min-height: 245px;
+}
+
+.project-card.media-left .project-content {
+  order: 2;
+}
+
+.project-card.media-left .project-visual {
+  order: 1;
+}
+
+.project-content {
+  padding: 1.25rem 1.2rem 1.15rem;
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+}
+
+.project-card.compact .project-content {
+  padding-bottom: 0.9rem;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.82rem);
+  line-height: 1.15;
+  color: #16263f;
+}
+
+.project-card p {
+  margin: 0.1rem 0 0;
+  color: #4d607d;
+  line-height: 1.5;
+  max-width: 34ch;
+}
+
+.project-category {
+  margin: 0;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7d87c2;
+}
+
+.project-card-footer {
+  margin-top: 0.45rem;
+}
+
+.project-card-footer a {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 0.35rem;
+  padding: 0.44rem 0.72rem;
+  background: #7f70c5;
+  color: #eef4ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.project-visual {
+  position: relative;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.64), transparent 44%),
+    linear-gradient(135deg, #d5dcf7, #b6c4eb);
+}
+
+.project-card:nth-child(2) .project-visual {
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.62), transparent 43%),
+    linear-gradient(135deg, #bfd9ff, #8cb3ea);
+}
+
+.project-card:nth-child(3) .project-visual {
+  min-height: 165px;
+  background:
+    radial-gradient(circle at 24% 20%, rgba(255, 255, 255, 0.58), transparent 45%),
+    linear-gradient(140deg, #d3e7db, #b7d5c5);
+}
+
+.project-card:nth-child(4) .project-visual {
+  min-height: 165px;
+  background:
+    radial-gradient(circle at 74% 15%, rgba(255, 255, 255, 0.58), transparent 45%),
+    linear-gradient(135deg, #e6ced6, #d8b1be);
+}
+
+.project-visual-layer {
+  position: absolute;
+  border-radius: 0.42rem;
+  border: 1px solid rgba(26, 42, 67, 0.16);
+  box-shadow: 0 8px 18px rgba(38, 54, 82, 0.16);
+  background: linear-gradient(180deg, #f9fbff, #ecf3ff);
+}
+
+.layer-main {
+  width: 48%;
+  height: 62%;
+  right: 18%;
+  top: 18%;
+}
+
+.layer-secondary {
+  width: 36%;
+  height: 44%;
+  left: 14%;
+  top: 30%;
+}
+
+.layer-tertiary {
+  width: 24%;
+  height: 30%;
+  right: 8%;
+  bottom: 12%;
+}
+
+.project-card.compact .layer-main {
+  width: 56%;
+  height: 52%;
+  right: 12%;
+  top: 26%;
+}
+
+.project-card.compact .layer-secondary {
+  width: 36%;
+  height: 36%;
+  left: 10%;
+  top: 38%;
+}
+
+.project-card.compact .layer-tertiary {
+  width: 20%;
+  height: 24%;
+  right: 48%;
+  bottom: 14%;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.media-left .project-content,
+  .project-card.media-left .project-visual {
+    order: initial;
+  }
+
+  .project-visual {
+    min-height: 170px;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: clamp(1.04rem, 6vw, 1.34rem);
+  }
+}

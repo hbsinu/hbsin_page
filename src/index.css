@@ -1,13 +1,22 @@
-:root {
-  --bg-main: #0f172a;
-  --card-bg: #1e293b;
-  --card-border: #334155;
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --accent-blue: #60a5fa;
-  --accent-purple: #a78bfa;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
 
-  font-family: system-ui, -apple-system, sans-serif;
+:root {
+  --bg-main: #0b1528;
+  --text-main: #e6f1ff;
+  --text-light-strong: #223248;
+  --text-muted-strong: #5f7492;
+
+  --surface-dark: #132f4c;
+  --surface-dark-border: rgba(122, 153, 191, 0.32);
+  --surface-light: #f3f7fd;
+  --surface-light-border: rgba(107, 133, 168, 0.35);
+
+  --accent-gold: #f5b640;
+
+  --font-display: 'Sora', 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+
+  font-family: var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,11 +27,25 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #15213d 0%, var(--bg-main) 52%);
+  background:
+    radial-gradient(circle at 3% 8%, rgba(38, 92, 145, 0.35), transparent 24%),
+    radial-gradient(circle at 95% 20%, rgba(57, 112, 166, 0.24), transparent 28%),
+    linear-gradient(180deg, #0b1528 0%, #0b182e 56%, #0b1528 100%);
   color: var(--text-main);
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
 }
 
 #root {

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">About portrait placeholder</title>
+  <desc id="desc">Stylized portrait placeholder with layered gradients.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b3f66"/>
+      <stop offset="100%" stop-color="#0f243c"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7d2b4"/>
+      <stop offset="100%" stop-color="#d8a98a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="340" r="150" fill="#10233a"/>
+  <ellipse cx="400" cy="370" rx="115" ry="140" fill="url(#skin)"/>
+  <path d="M285 640c60-65 170-98 225-92 82 9 125 53 129 147v180H161V750c6-47 36-82 124-110z" fill="#17324f"/>
+  <path d="M321 322c26-72 85-122 171-123 51 1 101 23 119 54 9 16 13 34 9 56-18-14-35-20-52-22-34-4-56 8-76 25-14 13-39 20-65 20-32 0-65-9-106-10z" fill="#0a1729"/>
+  <circle cx="360" cy="364" r="8" fill="#243447"/>
+  <circle cx="452" cy="364" r="8" fill="#243447"/>
+  <path d="M359 432c25 18 57 20 82-1" stroke="#9e5f4f" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <rect x="30" y="30" width="740" height="940" rx="26" fill="none" stroke="#7da3cc" stroke-opacity="0.35" stroke-width="3"/>
+</svg>
